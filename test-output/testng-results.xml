@@ -2,15 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6433" started-at="2018-02-28T09:48:43Z" finished-at="2018-02-28T09:48:49Z">
+  <suite name="Default suite" duration-ms="6911" started-at="2018-02-28T10:58:20Z" finished-at="2018-02-28T10:58:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6433" started-at="2018-02-28T09:48:43Z" finished-at="2018-02-28T09:48:49Z">
+    <test name="Default test" duration-ms="6911" started-at="2018-02-28T10:58:20Z" finished-at="2018-02-28T10:58:27Z">
       <class name="test1.HomePageTest">
-        <test-method status="PASS" signature="launchApplicationFromBrowser()[pri:0, instance:test1.HomePageTest@7cd62f43]" name="launchApplicationFromBrowser" duration-ms="6415" started-at="2018-02-28T15:18:43Z" finished-at="2018-02-28T15:18:49Z">
+        <test-method status="PASS" signature="launchApplication()[pri:0, instance:test1.HomePageTest@343f4d3d]" name="launchApplication" is-config="true" duration-ms="2388" started-at="2018-02-28T16:28:20Z" finished-at="2018-02-28T16:28:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method status="PASS" signature="launchApplicationFromBrowser()[pri:0, instance:test1.HomePageTest@343f4d3d]" name="launchApplicationFromBrowser" duration-ms="2156" started-at="2018-02-28T16:28:22Z" finished-at="2018-02-28T16:28:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplicationFromBrowser -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:test1.HomePageTest@343f4d3d]" name="closeDriver" is-config="true" duration-ms="2349" started-at="2018-02-28T16:28:24Z" finished-at="2018-02-28T16:28:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
       </class> <!-- test1.HomePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class HomePageTest 
@@ -13,8 +15,8 @@ public class HomePageTest
 	String USER_CONFIG = "src/test/java/config/";
 	WebDriver driver;
 	
-	@Test
-	public void launchApplicationFromBrowser()
+	@BeforeTest
+	public void launchApplication()
 	{
 		System.setProperty("webdriver.chrome.driver",USER_CONFIG + "/chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
@@ -29,9 +31,20 @@ public class HomePageTest
 		DesiredCapabilities capabilities = new DesiredCapabilities(DesiredCapabilities.chrome());
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 		driver = new ChromeDriver(capabilities);
-		driver.get("https://www.google.co.in/");
 		
+	}
+	
+	@Test
+	public void launchApplicationFromBrowser()
+	{
+		driver.get("https://www.google.co.in/");
 		Assert.assertEquals(driver.getTitle(),"Google");
+	}
+	
+	@AfterTest
+	public void closeDriver()
+	{
+		driver.close();
 	}
 
 }
